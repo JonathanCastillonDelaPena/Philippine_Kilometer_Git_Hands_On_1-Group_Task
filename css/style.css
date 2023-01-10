@@ -3,6 +3,9 @@
   margin: 0;
   box-sizing: border-box;
 }
+body {
+  background-color: #86c8bc;
+}
 
 .mainContainer {
   width: 80%;
@@ -10,4 +13,9 @@
   margin: auto;
   display: flex;
   align-items: center;
+}
+
+img {
+  width: 70px;
+  height: 70px;
 }
