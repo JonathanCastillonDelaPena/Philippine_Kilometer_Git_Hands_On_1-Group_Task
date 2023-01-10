@@ -15,7 +15,7 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="mainContainer d-lg-flex">
+    <div class="mainContainer d-block d-lg-flex">
       <div
         class="container w-50 h-75 p-3"
         style="
@@ -27,14 +27,26 @@
           <h3 class="text-dark" style="font-family: 'Bakbak One', cursive">
             Transportation
           </h3>
-          <img src="images/airplane.png" alt="" onclick="" id="byAir" />
-          <img src="images/car.png" alt="" onclick="" id="byLand" />
+          <img
+            src="images/airplane.png"
+            class="ms-2"
+            alt=""
+            onclick=""
+            id="byAir"
+          />
+          <img
+            src="images/car.png"
+            class="ms-5"
+            alt=""
+            onclick=""
+            id="byLand"
+          />
         </div>
         <form class="p-3">
           <fieldset>
             <div class="mb-3">
               <h2>From</h2>
-              <h2>Manila</h2>
+              <h2 style="color: #086d81">Manila</h2>
               <hr />
               <h2>To</h2>
               <select id="destinationArea" class="form-select btn btn-dark">
@@ -61,7 +73,9 @@
               </select>
             </div>
             <div class="mb-3"></div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-info">
+              Calculate Distance
+            </button>
           </fieldset>
         </form>
       </div>

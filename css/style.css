@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap");
+
 * {
   padding: 0;
   margin: 0;
@@ -5,6 +7,7 @@
 }
 body {
   background-color: #86c8bc;
+  font-family: "Bakbak One", cursive;
 }
 
 .mainContainer {
@@ -18,4 +21,11 @@ body {
 img {
   width: 70px;
   height: 70px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+img:hover {
+  background-color: rgb(100, 100, 100);
+  transition: 0.7s;
 }
