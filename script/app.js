@@ -53,23 +53,36 @@ function getDestinationDistanceByLand(selectedDestination){
 
 function displayDestinationArea(){
     document.getElementById(`destinationName`).innerHTML = getDestinationArea(selectedDestination);
-    console.log(getDestinationArea(selectedDestination));
 }
 function displayDestinationDescriptionData(){
     document.getElementById(`destinationDescription`).innerHTML = getDestinationDescriptionData(selectedDestination);
-    console.log(getDestinationDescriptionData(selectedDestination));
 }
-//Need to implement Destination Radio Button
-function displayDestinationDistance(){
-    // document.getElementById(`destinationDescription`).innerHTML = getDestinationDescriptionData(selectedDestination);
-    // console.log(getDestinationDescriptionData(selectedDestination));
+
+function displayDestinationDistanceAndTranspoType(){
+    let isByAirSelected = document.getElementById(`airRadioBtn`).checked;
+    let isByLandSelected = document.getElementById(`landRadioBtn`).checked;
+    let transpoType = null;
+    let distance = null;
     
+    if (isByAirSelected) {
+        transpoType = `Air`;
+        distance = getDestinationDistanceByAir(selectedDestination);
+    } else if (isByLandSelected){
+        transpoType = `Land`;
+        distance = getDestinationDistanceByLand(selectedDestination);
+    } else {
+        transpoType = `Error...`;
+        distance = `Error...`;
+    }
+    document.getElementById(`transpoType`).innerHTML = transpoType;
+    document.getElementById(`destinationDistance`).innerHTML = distance;
 }
 
 function displayOutput(){
     if (isDataInit) {
         getSelectedDestination();
         displayDestinationArea();
+        displayDestinationDistanceAndTranspoType();
         displayDestinationDescriptionData();
     } else {
         alert(`Data was not initialized...`);
