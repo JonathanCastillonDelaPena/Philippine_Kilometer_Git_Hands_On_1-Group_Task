@@ -32,12 +32,12 @@
           </h3>
           <label>
             <input type="radio" name="test" value="small" checked />
-            <img src="images/airplane.png" alt="Option 1" />
+            <img src="images/airplane.png" class="ms-3" alt="Option 1" />
           </label>
 
           <label>
             <input type="radio" name="test" value="big" />
-            <img src="images/car.png" alt="Option 2" />
+            <img src="images/car.png" class="ms-3" alt="Option 2" />
           </label>
         </div>
         <form class="p-3">
@@ -84,7 +84,6 @@
           height: 500px;
           background-color: #86c8bc;
           box-shadow: 5px 10px 10px rgb(71, 71, 71);
-          overflow-y: scroll;
         "
       >
       
@@ -104,7 +103,7 @@
                 src="images/ilo-ilo2.jpg"
                 class="locations d-block w-100"
                 alt="..."
-                style="height: 220px; object-fit: cover"
+                style="height: 220px; object-fit: fill"
               />
             </div>
           </div>
@@ -129,7 +128,10 @@
         </div>
         <h2 id="destinationVehicle">Vehicle</h2>
         <h2 id="destinationDistance">Distance</h2>
-        <h4 id="destinationDescription" style="text-align: justify">
+        <p
+          id="destinationDescription"
+          style="text-align: justify; overflow-y: scroll; height: 30%"
+        >
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate
           consectetur eaque animi possimus nihil ratione fuga quam voluptatibus
           aperiam vel facilis quo soluta laudantium doloribus voluptatem dolore
@@ -137,7 +139,7 @@
           laudantium ipsum exercitationem nobis dolor tempora sit eaque totam
           libero omnis itaque. Numquam similique consequatur iusto eligendi
           incidunt nostrum vitae facilis odio debitis ipsam.
-        </h4>
+        </p>
       </div>
     </div>
     <script src="script/bootstrap.bundle.min.js"></script>
