@@ -18,14 +18,26 @@ body {
   align-items: center;
 }
 
+[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+[type="radio"]:checked + img {
+  background-color: rgb(100, 100, 100);
+}
+
 img {
   width: 70px;
   height: 70px;
   border-radius: 15px;
   cursor: pointer;
+  margin-left: 30px;
 }
 
 img:hover {
   background-color: rgb(100, 100, 100);
-  transition: 0.7s;
+  transition: 0.8s;
 }

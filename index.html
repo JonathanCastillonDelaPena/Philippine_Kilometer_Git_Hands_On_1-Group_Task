@@ -21,26 +21,22 @@
         style="
           background-color: #ceedc7;
           box-shadow: 5px 10px 10px rgb(71, 71, 71);
+          height: 500px;
         "
       >
         <div class="container p-3">
           <h3 class="text-dark" style="font-family: 'Bakbak One', cursive">
             Transportation
           </h3>
-          <img
-            src="images/airplane.png"
-            class="ms-2"
-            alt=""
-            onclick=""
-            id="byAir"
-          />
-          <img
-            src="images/car.png"
-            class="ms-5"
-            alt=""
-            onclick=""
-            id="byLand"
-          />
+          <label>
+            <input type="radio" name="test" value="small" checked />
+            <img src="images/airplane.png" alt="Option 1" />
+          </label>
+
+          <label>
+            <input type="radio" name="test" value="big" />
+            <img src="images/car.png" alt="Option 2" />
+          </label>
         </div>
         <form class="p-3">
           <fieldset>
@@ -82,8 +78,10 @@
       <div
         class="container bg-info"
         style="
+          height: 500px;
           background-color: #86c8bc;
           box-shadow: 5px 10px 10px rgb(71, 71, 71);
+          overflow-y: scroll;
         "
       >
         <div id="carouselDestination" class="carousel slide pt-2">
@@ -93,7 +91,7 @@
                 src="images/ilo-ilo1.png"
                 class="d-block w-100"
                 alt="..."
-                style="height: 220px; object-fit: cover"
+                style="height: 220px; object-fit: fill"
               />
             </div>
             <div class="carousel-item">
@@ -126,7 +124,15 @@
         </div>
         <h2 id="destinationVehicle">Vehicle</h2>
         <h2 id="destinationDistance">Distance</h2>
-        <h4 id="destinationDescription">Description</h4>
+        <h4 id="destinationDescription" style="text-align: justify">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate
+          consectetur eaque animi possimus nihil ratione fuga quam voluptatibus
+          aperiam vel facilis quo soluta laudantium doloribus voluptatem dolore
+          dolorum, sapiente repellat? Quas est nostrum, minus provident fugit
+          laudantium ipsum exercitationem nobis dolor tempora sit eaque totam
+          libero omnis itaque. Numquam similique consequatur iusto eligendi
+          incidunt nostrum vitae facilis odio debitis ipsam.
+        </h4>
       </div>
     </div>
     <script src="script/bootstrap.bundle.min.js"></script>
