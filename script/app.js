@@ -63,7 +63,7 @@ function displayDestinationDistanceAndTranspoType(){
     let isByLandSelected = document.getElementById(`landRadioBtn`).checked;
     let transpoType = null;
     let distance = null;
-    
+
     if (isByAirSelected) {
         transpoType = `Air`;
         distance = getDestinationDistanceByAir(selectedDestination);
@@ -78,10 +78,16 @@ function displayDestinationDistanceAndTranspoType(){
     document.getElementById(`destinationDistance`).innerHTML = distance;
 }
 
+function displayDestinationImg(){
+    document.getElementById(`destinationImg1`).src = `images/${getDestinationArea(selectedDestination)}1.jpg`;
+    document.getElementById(`destinationImg2`).src = `images/${getDestinationArea(selectedDestination)}2.jpg`;
+}
+
 function displayOutput(){
     if (isDataInit) {
         getSelectedDestination();
         displayDestinationArea();
+        displayDestinationImg();
         displayDestinationDistanceAndTranspoType();
         displayDestinationDescriptionData();
     } else {
