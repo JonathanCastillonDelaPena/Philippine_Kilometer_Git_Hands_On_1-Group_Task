@@ -27,22 +27,26 @@
         "
       >
         <!--Left Container-->
-        <div class="container p-3">
-          <h3 class="text-dark" style="font-family: 'Bakbak One', cursive">
-            Transportation
-          </h3>
-          <label>
-            <input type="radio" name="test" value="small" checked />
-            <img src="images/airplane.png" class="ms-3" alt="Option 1" />
-          </label>
-
-          <label>
-            <input type="radio" name="test" value="big" />
-            <img src="images/car.png" class="ms-3" alt="Option 2" />
-          </label>
-        </div>
         <form class="p-3">
           <fieldset>
+            <div class="container p-3">
+              <h3 class="text-dark" style="font-family: 'Bakbak One', cursive">
+                Transportation
+              </h3>
+              <label>
+                <input type="radio" id="air" name="air" value="air" checked />
+                <img
+                  src="images/airplane.png"
+                  class="ms-3"
+                  alt="Image of airplane"
+                />
+              </label>
+
+              <label>
+                <input type="radio" id="land" name="land" value="land" />
+                <img src="images/car.png" class="ms-3" alt="Image of car" />
+              </label>
+            </div>
             <div class="mb-3">
               <h2>From</h2>
               <h2 style="color: #086d81">Manila</h2>
@@ -55,29 +59,33 @@
                 onblur="this.size=1;"
                 onchange="this.size=1; this.blur();"
               >
-                <option value="">Cebu</option>
-                <option value="">Siquijor</option>
-                <option value="">Boracay</option>
-                <option value="">El Nido</option>
-                <option value="">Coron</option>
-                <option value="">Chocolate Hills</option>
-                <option value="">Davao City</option>
-                <option value="">Puerto Princesa</option>
-                <option value="">Baguio</option>
-                <option value="">Ilo-Ilo</option>
-                <option value="">Vigan</option>
-                <option value="">Bacolod</option>
-                <option value="">Dumaguete</option>
-                <option value="">Tagaytay</option>
-                <option value="">Mactan</option>
-                <option value="">Apo Island</option>
-                <option value="">Sagada</option>
-                <option value="">Zamboanga</option>
-                <option value="">Legazpi</option>
-                <option value="">Baler</option>
+                <option value="Cebu">Cebu</option>
+                <option value="Siquijor">Siquijor</option>
+                <option value="Boracay">Boracay</option>
+                <option value="El Nido">El Nido</option>
+                <option value="Coron">Coron</option>
+                <option value="Chocolate Hill">Chocolate Hills</option>
+                <option value="Davao City">Davao City</option>
+                <option value="Puerto Princesa">Puerto Princesa</option>
+                <option value="Baguio">Baguio</option>
+                <option value="Ilo-Ilo">Ilo-Ilo</option>
+                <option value="Vigan">Vigan</option>
+                <option value="Bacolod">Bacolod</option>
+                <option value="Dumaguete">Dumaguete</option>
+                <option value="Tagaytay">Tagaytay</option>
+                <option value="Mactan">Mactan</option>
+                <option value="Apo Island">Apo Island</option>
+                <option value="Sagada">Sagada</option>
+                <option value="Zamboanga">Zamboanga</option>
+                <option value="Legazpi">Legazpi</option>
+                <option value="Baler">Baler</option>
               </select>
             </div>
-            <button type="submit" class="btn btn-info">
+            <button
+              type="submit"
+              id="calculateDistanceBtn"
+              class="btn btn-info"
+            >
               Calculate Distance
             </button>
           </fieldset>
