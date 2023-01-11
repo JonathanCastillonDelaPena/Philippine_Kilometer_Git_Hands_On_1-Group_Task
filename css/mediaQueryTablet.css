@@ -1,18 +1,23 @@
-
-/*for container*/
-@media (min-width:768px)and (max-width:834px){
-    .mainContainer{
-      width: 400px;
-      margin-top: 50px;
-    }
-  }
-
 /*for images*/
-
-@media (min-width:768px)and (max-width:834px){
-  #carouselDestination{
-    margin-top: 10px;
-    margin-left: -3px;
-    width: 100%;
+@media (min-width:767px)and (max-width:834px){
+  .locations{
+    margin-top: 5px;
+    margin-left: 0px;
+    margin-bottom: 5px;
+  }
+  #destinationDescription{
+    padding: 15px;
+  }
+   /*for container 1*/
+  .mainContainer{
+    width: 400px;
+    margin-top: 30px;
+    height: 800px;
+    padding-bottom: 10px;
+  }
+  /*for container 2*/
+  .container2{
+    width: 400px;
+    height: 800px;
   }
 }
