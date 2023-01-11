@@ -64,29 +64,34 @@
             onblur="this.size=1;"
             onchange="this.size=1; this.blur();"
           >
-            <option value="Cebu">Cebu</option>
-            <option value="Siquijor">Siquijor</option>
-            <option value="Boracay">Boracay</option>
-            <option value="El Nido">El Nido</option>
-            <option value="Coron">Coron</option>
-            <option value="Chocolate Hill">Chocolate Hills</option>
-            <option value="Davao City">Davao City</option>
-            <option value="Puerto Princesa">Puerto Princesa</option>
-            <option value="Baguio">Baguio</option>
-            <option value="Ilo-Ilo">Ilo-Ilo</option>
-            <option value="Vigan">Vigan</option>
-            <option value="Bacolod">Bacolod</option>
-            <option value="Dumaguete">Dumaguete</option>
-            <option value="Tagaytay">Tagaytay</option>
-            <option value="Mactan">Mactan</option>
-            <option value="Apo Island">Apo Island</option>
-            <option value="Sagada">Sagada</option>
-            <option value="Zamboanga">Zamboanga</option>
-            <option value="Legazpi">Legazpi</option>
-            <option value="Baler">Baler</option>
+            <option value="0">Cebu</option>
+            <option value="1">Siquijor</option>
+            <option value="2">Boracay</option>
+            <option value="3">El Nido</option>
+            <option value="4">Coron</option>
+            <option value="5">Chocolate Hills</option>
+            <option value="6">Davao City</option>
+            <option value="7">Puerto Princesa</option>
+            <option value="8">Baguio</option>
+            <option value="9">Ilo-Ilo</option>
+            <option value="10">Vigan</option>
+            <option value="11">Bacolod</option>
+            <option value="12">Dumaguete</option>
+            <option value="13">Tagaytay</option>
+            <option value="14">Mactan</option>
+            <option value="15">Apo Island</option>
+            <option value="16">Sagada</option>
+            <option value="17">Zamboanga</option>
+            <option value="18">Legazpi</option>
+            <option value="19">Baler</option>
           </select>
         </div>
-        <button type="submit" id="calculateDistanceBtn" class="btn btn-info">
+        <button
+          type="submit"
+          id="calculateDistanceBtn"
+          class="btn btn-info"
+          onclick="displayDestinationArea()"
+        >
           Calculate Distance
         </button>
       </div>
@@ -140,7 +145,7 @@
             <span class="visually-hidden">Next</span>
           </button>
         </div>
-        <h1>Location: <span id="destinationNAme">Baler</span></h1>
+        <h1>Location: <span id="destinationName">Baler</span></h1>
         <h2>Transportation: <span id="transpoType">Air</span></h2>
         <h2>Distance: <span id="destinationDistance">0</span>km</h2>
         <p
@@ -163,5 +168,6 @@
       </div>
     </div>
     <script src="script/bootstrap.bundle.min.js"></script>
+    <script src="script/app.js"></script>
   </body>
 </html>
