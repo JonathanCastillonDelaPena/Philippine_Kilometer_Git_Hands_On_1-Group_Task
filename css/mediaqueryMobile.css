@@ -1,0 +1,16 @@
+/* small width 576+ pixels */
+@media  (min-width: 576px) and (max-width: 766px) 
+{
+    #destinationDescription{font-size: 15px;}
+
+    h2{font-size: 20px;}
+
+    button{margin:30px 0px 0px 100px;}
+}
+
+/* small screen 360+ pixels */
+
+@media (min-width: 360px) and (max-width: 575px)
+{
+    button{margin:30px 0px 0px 30px;}
+}
