@@ -1,3 +1,4 @@
+var isDataInit = false;
 var destinations = [];
 var destinationDistanceByAir = [];
 var destinationDistanceByLand = [];
@@ -30,6 +31,7 @@ function initData(){
     initDestinationDistanceByAir();
     initDestinationDistanceByLand();
     initDestinationAreas();
+    isDataInit = true;
 }
 
 function getSelectedDestination(){
@@ -39,10 +41,38 @@ function getSelectedDestination(){
 function getDestinationArea(selectedDestination){
     return destinations[selectedDestination];
 }
+function getDestinationDescriptionData(selectedDestination){
+    return destinationDescriptionData[selectedDestination];
+}
+function getDestinationDistanceByAir(selectedDestination){
+    return destinationDistanceByAir[selectedDestination];
+}
+function getDestinationDistanceByLand(selectedDestination){
+    return destinationDistanceByLand[selectedDestination];
+}
 
 function displayDestinationArea(){
-    initDestinationAreas();
-    getSelectedDestination();
     document.getElementById(`destinationName`).innerHTML = getDestinationArea(selectedDestination);
     console.log(getDestinationArea(selectedDestination));
+}
+function displayDestinationDescriptionData(){
+    document.getElementById(`destinationDescription`).innerHTML = getDestinationDescriptionData(selectedDestination);
+    console.log(getDestinationDescriptionData(selectedDestination));
+}
+//Need to implement Destination Radio Button
+function displayDestinationDistance(){
+    // document.getElementById(`destinationDescription`).innerHTML = getDestinationDescriptionData(selectedDestination);
+    // console.log(getDestinationDescriptionData(selectedDestination));
+    
+}
+
+function displayOutput(){
+    if (isDataInit) {
+        getSelectedDestination();
+        displayDestinationArea();
+        displayDestinationArea();
+        displayDestinationDescriptionData();
+    } else {
+        alert(`Data was not initialized...`);
+    }
 }

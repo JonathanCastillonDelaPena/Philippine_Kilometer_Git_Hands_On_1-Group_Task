@@ -16,7 +16,7 @@
     />
     <title>Document</title>
   </head>
-  <body>
+  <body onload="initData()">
     <div class="mainContainer d-block d-lg-flex">
       <div
         class="container p-3"
@@ -90,7 +90,7 @@
           type="submit"
           id="calculateDistanceBtn"
           class="btn btn-info"
-          onclick="displayDestinationArea()"
+          onclick="displayOutput()"
         >
           Calculate Distance
         </button>
