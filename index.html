@@ -48,7 +48,13 @@
               <h2 style="color: #086d81">Manila</h2>
               <hr />
               <h2>To</h2>
-              <select id="destinationArea" class="form-select btn btn-dark">
+              <select
+                id="destinationArea"
+                class="form-select btn btn-dark w-50"
+                onfocus="this.size=5;"
+                onblur="this.size=1;"
+                onchange="this.size=1; this.blur();"
+              >
                 <option value="">Cebu</option>
                 <option value="">Siquijor</option>
                 <option value="">Boracay</option>
@@ -71,7 +77,6 @@
                 <option value="">Baler</option>
               </select>
             </div>
-            <div class="mb-3"></div>
             <button type="submit" class="btn btn-info">
               Calculate Distance
             </button>
@@ -126,11 +131,16 @@
             <span class="visually-hidden">Next</span>
           </button>
         </div>
-        <h2 id="destinationVehicle">Vehicle</h2>
+        <h1 id="destinationVehicle">Location: Baler</h1>
         <h2 id="destinationDistance">Distance</h2>
         <p
           id="destinationDescription"
-          style="text-align: justify; overflow-y: scroll; height: 30%"
+          style="
+            text-align: justify;
+            overflow-y: scroll;
+            height: 30%;
+            padding: 25px;
+          "
         >
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate
           consectetur eaque animi possimus nihil ratione fuga quam voluptatibus

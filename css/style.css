@@ -6,8 +6,9 @@
   box-sizing: border-box;
 }
 body {
-  background-color: #86c8bc;
+  background-image: url("/images/bg.jpg");
   font-family: "Bakbak One", cursive;
+  overflow: auto;
 }
 
 .mainContainer {
