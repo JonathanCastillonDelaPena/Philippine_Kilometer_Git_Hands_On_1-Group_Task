@@ -70,7 +70,6 @@ function displayOutput(){
     if (isDataInit) {
         getSelectedDestination();
         displayDestinationArea();
-        displayDestinationArea();
         displayDestinationDescriptionData();
     } else {
         alert(`Data was not initialized...`);
