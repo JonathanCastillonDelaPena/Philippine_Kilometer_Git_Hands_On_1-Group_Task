@@ -27,80 +27,68 @@
         "
       >
         <!--Left Container-->
-        <form class="p-3">
-          <fieldset>
-            <div class="container p-3">
-              <h3 class="text-dark" style="font-family: 'Bakbak One', cursive">
-                Transportation
-              </h3>
-              <label>
-                <input
-                  type="radio"
-                  id="airRadioBtn"
-                  name="radioBtn"
-                  value="air"
-                  checked
-                />
-                <img
-                  src="images/airplane.png"
-                  class="ms-3"
-                  alt="Img Airplane"
-                />
-              </label>
+        <div class="container p-3">
+          <h3 class="text-dark" style="font-family: 'Bakbak One', cursive">
+            Transportation
+          </h3>
+          <label>
+            <input
+              type="radio"
+              id="airRadioBtn"
+              name="radioBtn"
+              value="air"
+              checked
+            />
+            <img src="images/airplane.png" class="ms-3" alt="Img Airplane" />
+          </label>
 
-              <label>
-                <input
-                  type="radio"
-                  id="landRadioBtn"
-                  name="radioBtn"
-                  value="land"
-                />
-                <img src="images/car.png" class="ms-3" alt="Img Car" />
-              </label>
-            </div>
-            <div class="mb-3">
-              <h2>From</h2>
-              <h2 style="color: #086d81">Manila</h2>
-              <hr />
-              <h2>To</h2>
-              <select
-                id="destinationArea"
-                class="form-select btn btn-dark w-50"
-                onfocus="this.size=5;"
-                onblur="this.size=1;"
-                onchange="this.size=1; this.blur();"
-              >
-                <option value="Cebu">Cebu</option>
-                <option value="Siquijor">Siquijor</option>
-                <option value="Boracay">Boracay</option>
-                <option value="El Nido">El Nido</option>
-                <option value="Coron">Coron</option>
-                <option value="Chocolate Hill">Chocolate Hills</option>
-                <option value="Davao City">Davao City</option>
-                <option value="Puerto Princesa">Puerto Princesa</option>
-                <option value="Baguio">Baguio</option>
-                <option value="Ilo-Ilo">Ilo-Ilo</option>
-                <option value="Vigan">Vigan</option>
-                <option value="Bacolod">Bacolod</option>
-                <option value="Dumaguete">Dumaguete</option>
-                <option value="Tagaytay">Tagaytay</option>
-                <option value="Mactan">Mactan</option>
-                <option value="Apo Island">Apo Island</option>
-                <option value="Sagada">Sagada</option>
-                <option value="Zamboanga">Zamboanga</option>
-                <option value="Legazpi">Legazpi</option>
-                <option value="Baler">Baler</option>
-              </select>
-            </div>
-            <button
-              type="submit"
-              id="calculateDistanceBtn"
-              class="btn btn-info"
-            >
-              Calculate Distance
-            </button>
-          </fieldset>
-        </form>
+          <label>
+            <input
+              type="radio"
+              id="landRadioBtn"
+              name="radioBtn"
+              value="land"
+            />
+            <img src="images/car.png" class="ms-3" alt="Img Car" />
+          </label>
+        </div>
+        <div class="mb-3">
+          <h2>From</h2>
+          <h2 style="color: #086d81">Manila</h2>
+          <hr />
+          <h2>To</h2>
+          <select
+            id="destinationArea"
+            class="form-select btn btn-dark w-50"
+            onfocus="this.size=5;"
+            onblur="this.size=1;"
+            onchange="this.size=1; this.blur();"
+          >
+            <option value="Cebu">Cebu</option>
+            <option value="Siquijor">Siquijor</option>
+            <option value="Boracay">Boracay</option>
+            <option value="El Nido">El Nido</option>
+            <option value="Coron">Coron</option>
+            <option value="Chocolate Hill">Chocolate Hills</option>
+            <option value="Davao City">Davao City</option>
+            <option value="Puerto Princesa">Puerto Princesa</option>
+            <option value="Baguio">Baguio</option>
+            <option value="Ilo-Ilo">Ilo-Ilo</option>
+            <option value="Vigan">Vigan</option>
+            <option value="Bacolod">Bacolod</option>
+            <option value="Dumaguete">Dumaguete</option>
+            <option value="Tagaytay">Tagaytay</option>
+            <option value="Mactan">Mactan</option>
+            <option value="Apo Island">Apo Island</option>
+            <option value="Sagada">Sagada</option>
+            <option value="Zamboanga">Zamboanga</option>
+            <option value="Legazpi">Legazpi</option>
+            <option value="Baler">Baler</option>
+          </select>
+        </div>
+        <button type="submit" id="calculateDistanceBtn" class="btn btn-info">
+          Calculate Distance
+        </button>
       </div>
       <!--Right Container-->
       <div
