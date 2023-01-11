@@ -29,20 +29,15 @@
           <h3 class="text-dark" style="font-family: 'Bakbak One', cursive">
             Transportation
           </h3>
-          <img
-            src="images/airplane.png"
-            class="ms-2"
-            alt=""
-            onclick=""
-            id="byAir"
-          />
-          <img
-            src="images/car.png"
-            class="ms-5"
-            alt=""
-            onclick=""
-            id="byLand"
-          />
+          <label>
+            <input type="radio" name="test" value="small" checked />
+            <img src="images/airplane.png" class="ms-3" alt="Option 1" />
+          </label>
+
+          <label>
+            <input type="radio" name="test" value="big" />
+            <img src="images/car.png" class="ms-3" alt="Option 2" />
+          </label>
         </div>
         <form class="p-3">
           <fieldset>
@@ -87,7 +82,6 @@
           height: 500px;
           background-color: #86c8bc;
           box-shadow: 5px 10px 10px rgb(71, 71, 71);
-          overflow-y: scroll;
         "
         >
         <div id="carouselDestination" class="carousel slide pt-2">
@@ -105,7 +99,7 @@
                 src="images/ilo-ilo2.jpg"
                 class="d-block w-100"
                 alt="..."
-                style="height: 220px; object-fit: cover"
+                style="height: 220px; object-fit: fill"
               />
             </div>
           </div>
@@ -130,7 +124,10 @@
         </div>
         <h2 id="destinationVehicle">Vehicle</h2>
         <h2 id="destinationDistance">Distance</h2>
-        <h4 id="destinationDescription" style="text-align: justify">
+        <p
+          id="destinationDescription"
+          style="text-align: justify; overflow-y: scroll; height: 30%"
+        >
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate
           consectetur eaque animi possimus nihil ratione fuga quam voluptatibus
           aperiam vel facilis quo soluta laudantium doloribus voluptatem dolore
@@ -138,7 +135,7 @@
           laudantium ipsum exercitationem nobis dolor tempora sit eaque totam
           libero omnis itaque. Numquam similique consequatur iusto eligendi
           incidunt nostrum vitae facilis odio debitis ipsam.
-        </h4>
+        </p>
       </div>
     </div>
     <script src="script/bootstrap.bundle.min.js"></script>
