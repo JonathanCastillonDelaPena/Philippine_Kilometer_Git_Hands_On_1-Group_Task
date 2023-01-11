@@ -4,8 +4,15 @@
     .mainContainer{
       width: 400px;
       margin-top: 50px;
-
     }
   }
 
 /*for images*/
+
+@media (min-width:768px)and (max-width:834px){
+  .destinations{
+    margin-top: 10px;
+    margin-left: -3px;
+    width: 100%;
+  }
+}
