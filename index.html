@@ -6,17 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/mediaQueryTablet.css">
+    <link rel="stylesheet" href="css/mediaQueryTablet.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="css/mediaqueryMobile.css">
+    <link rel="stylesheet" href="css/mediaqueryMobile.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap"
       rel="stylesheet"
     />
     <title>Document</title>
   </head>
-  <body>
+  <body onload="initData()">
     <div class="mainContainer d-block d-lg-flex">
       <div
         class="container p-3"
@@ -26,62 +26,74 @@
           height: 500px;
         "
       >
-      <!--Left Container-->
+        <!--Left Container-->
         <div class="container p-3">
           <h3 class="text-dark" style="font-family: 'Bakbak One', cursive">
             Transportation
           </h3>
           <label>
-            <input type="radio" name="test" value="small" checked />
-            <img src="images/airplane.png" class="ms-3" alt="Option 1" />
+            <input
+              type="radio"
+              id="airRadioBtn"
+              name="radioBtn"
+              value="air"
+              checked
+            />
+            <img src="images/airplane.png" class="ms-3" alt="Img Airplane" />
           </label>
 
           <label>
-            <input type="radio" name="test" value="big" />
-            <img src="images/car.png" class="ms-3" alt="Option 2" />
+            <input
+              type="radio"
+              id="landRadioBtn"
+              name="radioBtn"
+              value="land"
+            />
+            <img src="images/car.png" class="ms-3" alt="Img Car" />
           </label>
         </div>
-        <form class="p-3">
-          <fieldset>
-            <div class="mb-3">
-              <h2>From</h2>
-              <h2 style="color: #086d81">Manila</h2>
-              <hr />
-              <h2>To</h2>
-              <select
-                id="destinationArea"
-                class="form-select btn btn-dark w-50"
-                onfocus="this.size=5;"
-                onblur="this.size=1;"
-                onchange="this.size=1; this.blur();"
-              >
-                <option value="">Cebu</option>
-                <option value="">Siquijor</option>
-                <option value="">Boracay</option>
-                <option value="">El Nido</option>
-                <option value="">Coron</option>
-                <option value="">Chocolate Hills</option>
-                <option value="">Davao City</option>
-                <option value="">Puerto Princesa</option>
-                <option value="">Baguio</option>
-                <option value="">Ilo-Ilo</option>
-                <option value="">Vigan</option>
-                <option value="">Bacolod</option>
-                <option value="">Dumaguete</option>
-                <option value="">Tagaytay</option>
-                <option value="">Mactan</option>
-                <option value="">Apo Island</option>
-                <option value="">Sagada</option>
-                <option value="">Zamboanga</option>
-                <option value="">Legazpi</option>
-                <option value="">Baler</option>
-              </select>
-            </div>
-            <button type="submit" class="btn btn-info">
-              Calculate Distance
-            </button>
-          </fieldset>
-        </form>
+        <div class="mb-3">
+          <h2>From</h2>
+          <h2 style="color: #086d81">Manila</h2>
+          <hr />
+          <h2>To</h2>
+          <select
+            id="destinationArea"
+            class="form-select btn btn-dark w-50"
+            onfocus="this.size=5;"
+            onblur="this.size=1;"
+            onchange="this.size=1; this.blur();"
+          >
+            <option value="0">Cebu</option>
+            <option value="1">Siquijor</option>
+            <option value="2">Boracay</option>
+            <option value="3">El Nido</option>
+            <option value="4">Coron</option>
+            <option value="5">Chocolate Hills</option>
+            <option value="6">Davao City</option>
+            <option value="7">Puerto Princesa</option>
+            <option value="8">Baguio</option>
+            <option value="9">Ilo-Ilo</option>
+            <option value="10">Vigan</option>
+            <option value="11">Bacolod</option>
+            <option value="12">Dumaguete</option>
+            <option value="13">Tagaytay</option>
+            <option value="14">Mactan</option>
+            <option value="15">Apo Island</option>
+            <option value="16">Sagada</option>
+            <option value="17">Zamboanga</option>
+            <option value="18">Legazpi</option>
+            <option value="19">Baler</option>
+          </select>
+        </div>
+        <button
+          type="submit"
+          id="calculateDistanceBtn"
+          class="btn btn-info"
+          onclick="displayOutput()"
+        >
+          Calculate Distance
+        </button>
       </div>
       <!--Right Container-->
       <div
@@ -92,22 +104,24 @@
           box-shadow: 5px 10px 10px rgb(71, 71, 71);
         "
       >
-      <!--Carousel Destination-->
+        <!--Carousel Destination-->
         <div id="carouselDestination" class="carousel slide pt-2">
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img
-                src="images/ilo-ilo1.png"
+                src="images/Cebu1.jpg"
+                id="destinationImg1"
                 class="locations d-block w-100"
-                alt="..."
+                alt="Image of the Destination."
                 style="height: 220px; object-fit: fill"
               />
             </div>
             <div class="carousel-item">
               <img
-                src="images/ilo-ilo2.jpg"
+                src="images/Cebu2.jpg"
+                id="destinationImg2"
                 class="locations d-block w-100"
-                alt="..."
+                alt="Image of the Destination."
                 style="height: 220px; object-fit: fill"
               />
             </div>
@@ -131,8 +145,9 @@
             <span class="visually-hidden">Next</span>
           </button>
         </div>
-        <h1 id="destinationVehicle">Location: Baler</h1>
-        <h2 id="destinationDistance">Distance</h2>
+        <h1>Location: <span id="destinationName">Cebu</span></h1>
+        <h2>Transportation: <span id="transpoType">Air</span></h2>
+        <h2>Distance: <span id="destinationDistance">566</span>km</h2>
         <p
           id="destinationDescription"
           style="
@@ -142,16 +157,14 @@
             padding: 25px;
           "
         >
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate
-          consectetur eaque animi possimus nihil ratione fuga quam voluptatibus
-          aperiam vel facilis quo soluta laudantium doloribus voluptatem dolore
-          dolorum, sapiente repellat? Quas est nostrum, minus provident fugit
-          laudantium ipsum exercitationem nobis dolor tempora sit eaque totam
-          libero omnis itaque. Numquam similique consequatur iusto eligendi
-          incidunt nostrum vitae facilis odio debitis ipsam.
+          It is one of the country's largest cities and is a bustling port. Its
+          harbour is provided by the sheltered strait between Mactan Island and
+          the coast. The country's oldest settlement, it is also one of its most
+          historic and retains much of the flavour of its long Spanish heritage.
         </p>
       </div>
     </div>
     <script src="script/bootstrap.bundle.min.js"></script>
+    <script src="script/app.js"></script>
   </body>
 </html>
